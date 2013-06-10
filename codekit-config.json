@@ -67,21 +67,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/lib\/activation.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/activation.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/base.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/base.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/lib\/activation.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/activation.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -174,18 +174,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_partials\/font-awesome.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_partials\/font-awesome.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/font-awesome.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/js\/foundation\/foundation.section.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -219,8 +207,17 @@
       "outputAbbreviatedPath" : "\/js\/vendor\/zepto-min.js",
       "fileType" : 64
     },
-<<<<<<< HEAD
-=======
+    "\/js\/_plugins\/_jquery.fittext.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/_plugins\/_jquery.fittext.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/_plugins\/_jquery.fittext-min.js",
+      "fileType" : 64
+    },
     "\/lib\/countdown\/countdown.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -230,7 +227,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
     "\/sass\/_foundation\/_components\/_sub-nav.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -243,15 +239,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/sidebar.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/sidebar.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/sass\/_foundation\/_components\/_visibility.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -263,6 +250,15 @@
       "outputAbbreviatedPath" : "\/css\/_visibility.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/lib\/sidebar.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/sidebar.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/css\/screen.css" : {
       "ignoreWasSetByUser" : 0,
@@ -284,21 +280,21 @@
       "outputAbbreviatedPath" : "\/js\/vendor\/jquery.1.8.3-min-min.js",
       "fileType" : 64
     },
-    "\/lib\/cleanup.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/cleanup.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/templates\/head.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/templates\/head.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/lib\/cleanup.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/cleanup.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -615,8 +611,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-<<<<<<< HEAD
-=======
     "\/index.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -626,7 +620,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
     "\/sass\/_foundation\/_components\/_dropdown-buttons.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -639,18 +632,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-<<<<<<< HEAD
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-=======
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
     "\/lib\/htaccess.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -744,18 +725,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_foundation\/_components\/_grid.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_grid.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_grid.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/sass\/_foundation\/_components\/_tables.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -765,6 +734,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/css\/_tables.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/sass\/_foundation\/_components\/_grid.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_grid.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_grid.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -821,7 +802,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-<<<<<<< HEAD
     "\/sass\/_foundation\/_components\/_breadcrumbs.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -834,25 +814,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/js\/foundation\/foundation.topbar.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.topbar.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.topbar-min.js",
-=======
-    "\/lib\/countdown\/get-countdown.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/countdown\/get-countdown.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/js\/_main\/_get-countdown.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -862,7 +823,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/_main\/_get-countdown-min.js",
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
       "fileType" : 64
     },
     "\/sass\/_foundation\/_components\/_orbit.scss" : {
@@ -877,17 +837,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-<<<<<<< HEAD
-    "\/js\/main-min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/main-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/main-min-min.js",
-=======
     "\/js\/foundation\/foundation.topbar.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -897,7 +846,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/foundation\/foundation.topbar-min.js",
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
       "fileType" : 64
     },
     "\/lib\/utils.php" : {
@@ -909,48 +857,26 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/js\/foundation\/foundation.clearing.js" : {
+    "\/js\/vendor\/jquery.1.8.3.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing.js",
+      "inputAbbreviatedPath" : "\/js\/vendor\/jquery.1.8.3.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing-min.js",
+      "outputAbbreviatedPath" : "\/js\/vendor\/jquery.1.8.3-min.js",
       "fileType" : 64
     },
-<<<<<<< HEAD
     "\/js\/foundation\/foundation.magellan.js" : {
-=======
-<<<<<<< HEAD
-    "\/js\/foundation\/foundation.magellan.js" : {
-=======
-    "\/js\/foundation\/foundation.clearing.js" : {
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
->>>>>>> 63f91b65570fbb44c71d96ca036841dffbd5673a
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-<<<<<<< HEAD
       "inputAbbreviatedPath" : "\/js\/foundation\/foundation.magellan.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/foundation\/foundation.magellan-min.js",
-=======
-<<<<<<< HEAD
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.magellan.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.magellan-min.js",
-=======
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing-min.js",
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
->>>>>>> 63f91b65570fbb44c71d96ca036841dffbd5673a
       "fileType" : 64
     },
     "\/sass\/_foundation\/_components\/_type.scss" : {
@@ -965,40 +891,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-<<<<<<< HEAD
-    "\/js\/foundation\/foundation.clearing.js" : {
-=======
-    "\/functions.php" : {
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-<<<<<<< HEAD
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing-min.js",
-      "fileType" : 64
-    },
-    "\/functions.php" : {
-=======
-      "inputAbbreviatedPath" : "\/functions.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/sass\/_foundation\/_components\/_breadcrumbs.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_breadcrumbs.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_breadcrumbs.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/js\/main-min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1010,31 +902,34 @@
       "outputAbbreviatedPath" : "\/js\/main-min-min.js",
       "fileType" : 64
     },
-<<<<<<< HEAD
-    "\/js\/vendor\/jquery.1.8.3.js" : {
-=======
-    "\/js\/foundation\/foundation.magellan.js" : {
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
->>>>>>> 63f91b65570fbb44c71d96ca036841dffbd5673a
+    "\/js\/foundation\/foundation.clearing.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-<<<<<<< HEAD
-      "inputAbbreviatedPath" : "\/js\/vendor\/jquery.1.8.3.js",
-=======
-<<<<<<< HEAD
+      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/foundation\/foundation.clearing-min.js",
+      "fileType" : 64
+    },
+    "\/functions.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/functions.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-=======
-      "inputAbbreviatedPath" : "\/js\/foundation\/foundation.magellan.js",
->>>>>>> 63f91b65570fbb44c71d96ca036841dffbd5673a
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/vendor\/jquery.1.8.3-min.js",
-      "fileType" : 64
->>>>>>> 0b79394a1976dbe2f6ec80deb612b68ac5c00361
+    },
+    "\/lib\/countdown\/get-countdown.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/countdown\/get-countdown.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/single.php" : {
       "ignoreWasSetByUser" : 0,

@@ -1,3 +1,15 @@
 * {
   position: relative;
 }
+
+.countdown-holster {
+	> div {
+		padding: 2.5% !important;
+		text-transform: uppercase;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
