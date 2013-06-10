@@ -27,6 +27,8 @@ $projectCountdown = array();
 			'big_deal' => $big_deal,
 			'project_color' => $project_color,
 			'due_date' => $due_date,
+			'project_id' => $post->ID,
+			'link' => get_permalink($post->ID)
 		);
 
 	endwhile;
