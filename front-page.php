@@ -1,7 +1,5 @@
 
 
-<?php while (have_posts()) : the_post(); ?>
+<section class="row countdown-holster">
 
-  <?php the_content(); ?>
-  
-<?php endwhile; ?>
+</section>
