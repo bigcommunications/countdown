@@ -1,3 +1,1 @@
-/* Author:
-
-*/;
+$.ajax({type:"GET",url:"wp-content/themes/countdown/lib/countdown/get-countdown.php",dataType:"json",beforeSend:function(){},success:function(e){i=0;$.each(e,function(e,t){countDownWrapper=$(".countdown-holster");dataTitle=t.project_title;dataColor=t.project_color;dataDeal=t.big_deal;dataDueDate=t.due_date;countDownWrapper.append('<div class="large-3 columns end" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">'+"<h3>"+dataTitle+"</h3>"+"</div>").children().hide()})},complete:function(){i=0;countDownWrapper.children().each(function(){var e=$(this);setTimeout(function(){e.fadeIn(800)},800*i++)})},error:function(){}});
