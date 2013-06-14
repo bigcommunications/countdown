@@ -22,10 +22,10 @@ $projectCountdown = array();
 		$project_color = get_post_meta($post->ID, 'project_color', true);
 		$start_date = date('r', strtotime(get_post_meta($post->ID, 'start_date', true)));
 		$due_date = date('r', strtotime(get_post_meta($post->ID, 'due_date', true)));
-		$milestones = get_field('milestone', $post->ID);
+		$milestones = get_field('milestones', $post->ID);
 
 		foreach($milestones as $index => $value){
-			$milestones[$index] = date('r', strtotime($value));
+			$milestones[$index]["due_date"] = date('r', strtotime($value["due_date"]));
 		}
 
 		$projectCountdown[] = array(
