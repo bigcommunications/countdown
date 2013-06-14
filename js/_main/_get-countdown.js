@@ -6,7 +6,11 @@ $.ajax({
 
 			},
 			success: function(data){
-
+				var due;
+				var days_left;
+				var hours_left;
+				var minutes_left;
+				var seconds_left;
 				i = 0;
 				$.each(data, function(index, p){
 
@@ -44,7 +48,7 @@ $.ajax({
 
 					countDownWrapper.append('<div class="large-3 columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
 
-						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span>'+ Math.floor(diff_days) + '</span> days</p>' + '<p><span>'+ null +'</span> hours</p>' + '<p><span>'+ null +'</span> minutes</p>' + '<p><span>'+ null +'</span> seconds</p>'
+						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span>'+ days_left + '</span> days</p>' + '<p><span>'+ null +'</span> hours</p>' + '<p><span>'+ null +'</span> minutes</p>' + '<p><span>'+ null +'</span> seconds</p>'
 
 					+ '</div>').children().hide().each(
 						function() {
