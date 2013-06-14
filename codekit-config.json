@@ -309,6 +309,15 @@
       "outputAbbreviatedPath" : "\/js\/foundation\/foundation.joyride-min.js",
       "fileType" : 64
     },
+    "\/lib\/config.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/config.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/js\/foundation\/foundation.forms.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -319,15 +328,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/foundation\/foundation.forms-min.js",
       "fileType" : 64
-    },
-    "\/lib\/config.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/config.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/templates\/comments.php" : {
       "ignoreWasSetByUser" : 0,
@@ -522,15 +522,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_foundation\/_components\/_flex-video.scss" : {
+    "\/sass\/_foundation\/_components\/_clearing.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_flex-video.scss",
+      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_clearing.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_flex-video.css",
+      "outputAbbreviatedPath" : "\/css\/_clearing.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -557,17 +557,38 @@
       "outputAbbreviatedPath" : "\/js\/plugins-min.js",
       "fileType" : 64
     },
-    "\/sass\/_foundation\/_components\/_clearing.scss" : {
+    "\/sass\/_foundation\/_components\/_flex-video.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_clearing.scss",
+      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_flex-video.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_clearing.css",
+      "outputAbbreviatedPath" : "\/css\/_flex-video.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/sass\/_foundation\/_components\/_panels.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_panels.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_panels.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/scripts.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/scripts.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/sass\/_application.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -581,26 +602,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/scripts.php" : {
+    "\/lib\/nav.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/scripts.php",
+      "inputAbbreviatedPath" : "\/lib\/nav.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/sass\/_foundation\/_components\/_panels.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_foundation\/_components\/_panels.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_panels.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/index.php" : {
       "ignoreWasSetByUser" : 0,
@@ -622,15 +631,6 @@
       "outputAbbreviatedPath" : "\/css\/_dropdown-buttons.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/lib\/nav.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/nav.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/lib\/htaccess.php" : {
       "ignoreWasSetByUser" : 0,
