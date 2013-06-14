@@ -11,24 +11,19 @@ $.ajax({
 						today = new Date();
 						document.getElementById('today').style.left = ((today.getTime()-oldest)/total_time*100) + '%';
 					}
-					var projects = [
-								{
-									'title': 'Montevallo', 'color': 'purple', 'start': new Date(2012, 9, 1), 'end': new Date(2013, 7, 5),
-									'milestones': [new Date(2013, 4, 1), new Date(2013, 6, 14), new Date(2013, 7, 1)]
-								},
-								{
-									'title': 'JNN', 'color': '#BF301A', 'start': new Date(2013, 1, 1), 'end': new Date(2013, 7, 14),
-									'milestones': [new Date(2013, 4, 1), new Date(2013, 6, 14), new Date(2013, 7, 1)]
-								},
-								{
-									'title': 'Big', 'color': '#FD7B07', 'start': new Date(2013, 5, 1), 'end': new Date(2014, 4, 1),
-									'milestones': [new Date(2013, 8, 1), new Date(2013, 9, 20), new Date(2014, 2, 7)]
-								},
-								{
-									'title': 'I Choose B', 'color': '#ED5C4B', 'start': new Date(2013, 4, 1), 'end': new Date(2014, 7, 1),
-									'milestones': [new Date(2013, 5, 1), new Date(2013, 5, 20), new Date(2013, 7, 7)]
-								}
-							];
+
+					$.each(data, function(index, m){
+						data[index].start = new Date(data[index].start);
+						data[index].end = new Date(data[index].end);
+						if(data[index].milestones){
+							$.each(data[index].milstones, function(subIndex, subM){
+								data[index].milstones[subIndex] = new Date(subM);
+							});
+						}
+					});
+
+					var projects = data;
+
 						var	container = document.getElementById('bars'),
 						today = new Date(),
 						oldest = new Date(),
@@ -53,10 +48,10 @@ $.ajax({
 						project = projects[c];
 						el = document.createElement('div');
 						el.className = 'bar';
-						el.title = project.title;
+						el.title = project.project_title;
 						el.style.marginLeft = Math.round((project.start-oldest)/total_time*100) + '%';
 						el.style.marginRight = Math.round((latest-project.end)/total_time*100) + '%';
-						el.style.background = project.color;
+						el.style.background = project.project_color;
 						if(project.milestones) {
 							for(mile_c = 0, mile_l = project.milestones.length; mile_c < mile_l; mile_c++) {
 								if(project.milestones[mile_c] >= project.start && project.milestones[mile_c] <= project.end) {

@@ -20,15 +20,23 @@ $projectCountdown = array();
 		$title = get_the_title($post->ID);
 		$big_deal = get_post_meta($post->ID, 'is_this_a_big_deal', true);
 		$project_color = get_post_meta($post->ID, 'project_color', true);
-		$due_date = get_post_meta($post->ID, 'due_date', true);
+		$start_date = date('r', strtotime(get_post_meta($post->ID, 'start_date', true)));
+		$due_date = date('r', strtotime(get_post_meta($post->ID, 'due_date', true)));
+		$milestones = get_field('milestone', $post->ID);
+
+		foreach($milestones as $index => $value){
+			$milestones[$index] = date('r', strtotime($value));
+		}
 
 		$projectCountdown[] = array(
 			'project_title' => $title,
 			'big_deal' => $big_deal,
 			'project_color' => $project_color,
-			'due_date' => $due_date,
+			'start' => $start_date,
+			'end' => $due_date,
 			'project_id' => $post->ID,
-			'link' => get_permalink($post->ID)
+			'link' => get_permalink($post->ID),
+			'milestones' => $milestones
 		);
 
 	endwhile;

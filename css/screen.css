@@ -5956,7 +5956,41 @@ table tfoot tr td {
   text-transform: uppercase;
 }
 
-/* line 13, ../sass/_application.scss */
+/* line 14, ../sass/_application.scss */
+.count-down-bars .bar {
+  width: auto;
+  height: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+/* line 23, ../sass/_application.scss */
+.count-down-bars #today,
+.count-down-bars #oldest,
+.count-down-bars #latest,
+.count-down-bars .milestone {
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  border-left: 1px dashed gray;
+  top: 0;
+}
+/* line 30, ../sass/_application.scss */
+.count-down-bars .milestone {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+/* line 34, ../sass/_application.scss */
+.count-down-bars .date {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: -14px;
+  width: 100px;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* line 45, ../sass/_application.scss */
 p {
   margin: 0;
   padding: 0;

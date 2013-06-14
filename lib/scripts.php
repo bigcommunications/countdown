@@ -29,8 +29,8 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_register_script('roots_plugins', get_template_directory_uri() . '/js/plugins-min.js', false, null, false);
-  wp_register_script('roots_main', get_template_directory_uri() . '/js/main-min.js', false, null, false);
+  wp_register_script('roots_plugins', get_template_directory_uri() . '/js/plugins-min.js', false, null, true);
+  wp_register_script('roots_main', get_template_directory_uri() . '/js/main-min.js', false, null, true);
   wp_enqueue_script('roots_plugins');
   wp_enqueue_script('roots_main');
 }

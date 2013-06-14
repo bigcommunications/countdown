@@ -1,3 +1,24 @@
+function handleUpdate(due_yr, due_month, due_day, dataID){
+ setInterval(
+ 		function() {
+ 			var res = calctime(due_yr, due_month, due_day);
+ 			$('#counter-'+dataID+' .days').html(res.days);
+ 			$('#counter-'+dataID+' .hours').html(res.hours);
+ 			$('#counter-'+dataID+' .mins').html(res.minutes);
+ 			$('#counter-'+dataID+' .secs').html(res.seconds);
+ 		}, 1000
+ );
+}
+function calctime(y, m, d) {
+	var tod = new Date().getTime(),
+		due = new Date(y, m, d, 17, 00, 00).getTime();
+		days_left = Math.floor((due-tod)/(86400000)),
+		hours_left = Math.floor(((due-tod)%(86400000))/(3600000)),
+		minutes_left = Math.floor((((due-tod)%(86400000))%(3600000))/(60000)),
+		seconds_left = Math.floor((((due-tod)%(86400000))%(3600000))%(60000)/1000);
+	return {'days': days_left, 'hours': hours_left, 'minutes': minutes_left, 'seconds': seconds_left};
+}
+countDownWrapper = $('.countdown-holster');
 $.ajax({
 			type: 'GET',
 			url: 'wp-content/themes/countdown/lib/countdown/get-countdown.php',
@@ -6,49 +27,31 @@ $.ajax({
 
 			},
 			success: function(data){
-				var due;
-				var days_left;
-				var hours_left;
-				var minutes_left;
-				var seconds_left;
 				i = 0;
 				$.each(data, function(index, p){
 
-					countDownWrapper = $('.countdown-holster');
+					var due;
+					var days_left;
+					var hours_left;
+					var minutes_left;
+					var seconds_left;
 
 					dataTitle = p.project_title;
 					dataColor = p.project_color;
 					dataDeal = p.big_deal;
-					dataDueDate = p.due_date;
+					dataStartDate = new Date(p.start);
+					dataDueDate = new Date(p.end);
 					dataLink = p.link;
 					dataID = p.project_id;
 					//Break due date into Year, Month, Day
-					due_yr = dataDueDate.substring(0,4);
-					due_month = dataDueDate.substring(4,6) - 1;
-					due_day = dataDueDate.substring(6);
-					function calctime(y, m, d, h, i, s) {
-						var tod = new Date().getTime(),
-							due = new Date(due_yr, due_month, due_day, 00, 00, 00).getTime();
-							days_left = Math.floor((due-tod)/(86400000)),
-							hours_left = Math.floor(((due-tod)%(86400000))/(3600000)),
-							minutes_left = Math.floor((((due-tod)%(86400000))%(3600000))/(60000)),
-							seconds_left = Math.floor((((due-tod)%(86400000))%(3600000))%(60000)/1000);
-						return {'days': days_left, 'hours': hours_left, 'minutes': minutes_left, 'seconds': seconds_left};
-					}
+					due_yr = dataDueDate.getFullYear();
+					due_month = dataDueDate.getMonth();
+					due_day = dataDueDate.getDate();
 
-					// setInterval(
-					// 		function() {
-					// 			var res = calctime(2013, 5, 11, 18, 00, 00);
-					// 			document.getElementById('days').innerHTML = res.days;
-					// 			document.getElementById('hours').innerHTML = res.hours;
-					// 			document.getElementById('minutes').innerHTML = res.minutes;
-					// 			document.getElementById('seconds').innerHTML = res.seconds;
-					// 		}, 1000
-					// 	);
+					var calcDays = calctime(due_yr, due_month, due_day);
+					countDownWrapper.append('<div id="counter-'+dataID+'" class="large-3 columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
 
-					countDownWrapper.append('<div class="large-3 columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
-
-						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span>'+ days_left + '</span> days</p>' + '<p><span>'+ null +'</span> hours</p>' + '<p><span>'+ null +'</span> minutes</p>' + '<p><span>'+ null +'</span> seconds</p>'
+						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span class="days">'+ calcDays.days + '</span> days</p>' + '<p><span class="hours">'+ calcDays.hours +'</span> hours</p>' + '<p><span class="mins">'+ calcDays.minutes +'</span> minutes</p>' + '<p><span class="secs">'+ calcDays.seconds +'</span> seconds</p>'
 
 					+ '</div>').children().hide().each(
 						function() {
@@ -61,6 +64,10 @@ $.ajax({
 								});
 							});
 						});
+
+						// Update time
+						handleUpdate(due_yr, due_month, due_day, dataID);
+
 				});
 
 			},
