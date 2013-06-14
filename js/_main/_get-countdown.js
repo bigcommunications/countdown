@@ -18,21 +18,31 @@ $.ajax({
 					dataDueDate = p.due_date;
 					//Break due date into Year, Month, Day
 					due_yr = dataDueDate.substring(0,4);
-					due_month = dataDueDate.substring(4,6);
+					due_month = dataDueDate.substring(4,6) - 1;
 					due_day = dataDueDate.substring(6);
-					//console.log(due_yr + ' ' + due_month + ' ' + due_day);
-					//Date + Time Right Now
-					d = new Date();
-					//Newly constructed Due Date
-					x = new Date(due_yr,due_month,due_day, 00,00,00);
-					//NEED MATH TO ACTUALLY GET THE RIGHT NUMBERS
-					diff_days = Math.abs((d.getTime() - x.getTime())/(24*60*60*1000));
-					//THIS IS WAY OFF. Trying to figure out how to turn the remainder of diff_days into hours.
-					diff_hours = diff_days.toString().split('.')[1] / (24*60*60*1000);
+					function calctime(y, m, d, h, i, s) {
+						var tod = new Date().getTime(),
+							due = new Date(due_yr, due_month, due_day, 00, 00, 00).getTime();
+							days_left = Math.floor((due-tod)/(86400000)),
+							hours_left = Math.floor(((due-tod)%(86400000))/(3600000)),
+							minutes_left = Math.floor((((due-tod)%(86400000))%(3600000))/(60000)),
+							seconds_left = Math.floor((((due-tod)%(86400000))%(3600000))%(60000)/1000);
+						return {'days': days_left, 'hours': hours_left, 'minutes': minutes_left, 'seconds': seconds_left};
+					}
+
+					// setInterval(
+					// 		function() {
+					// 			var res = calctime(2013, 5, 11, 18, 00, 00);
+					// 			document.getElementById('days').innerHTML = res.days;
+					// 			document.getElementById('hours').innerHTML = res.hours;
+					// 			document.getElementById('minutes').innerHTML = res.minutes;
+					// 			document.getElementById('seconds').innerHTML = res.seconds;
+					// 		}, 1000
+					// 	);
 
 					countDownWrapper.append('<div class="large-3 columns end" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
 
-						'<h4>'+dataTitle+'</h4>' + '<p>'+ Math.floor(diff_days) + ' days</p>' + '<p>'+ null +' hours</p>' + '<p>'+ null +' minutes</p>' + '<p>'+ null +' seconds</p>' 
+						'<h4>'+dataTitle+'</h4>' + '<p>'+ days_left + ' days</p>' + '<p>'+  +' hours</p>' + '<p>'+ null +' minutes</p>' + '<p>'+ null +' seconds</p>' 
 
 					+ '</div>').children().hide().each(
 						function() {
