@@ -16,6 +16,8 @@ $.ajax({
 					dataColor = p.project_color;
 					dataDeal = p.big_deal;
 					dataDueDate = p.due_date;
+					dataLink = p.link;
+					dataID = p.project_id;
 					//Break due date into Year, Month, Day
 					due_yr = dataDueDate.substring(0,4);
 					due_month = dataDueDate.substring(4,6) - 1;
@@ -40,13 +42,20 @@ $.ajax({
 					// 		}, 1000
 					// 	);
 
-					countDownWrapper.append('<div class="large-3 columns end" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
+					countDownWrapper.append('<div class="large-3 columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
 
-						'<h4>'+dataTitle+'</h4>' + '<p>'+ days_left + ' days</p>' + '<p>'+  +' hours</p>' + '<p>'+ null +' minutes</p>' + '<p>'+ null +' seconds</p>' 
+						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span>'+ Math.floor(diff_days) + '</span> days</p>' + '<p><span>'+ null +'</span> hours</p>' + '<p><span>'+ null +'</span> minutes</p>' + '<p><span>'+ null +'</span> seconds</p>'
 
 					+ '</div>').children().hide().each(
 						function() {
-							$(this).css('background-color',$(this).data('color'));
+							var opacity = 1;
+							$(this).find('span').each(function(){
+								opacity = opacity-.15;
+								$(this).css({
+									'color' : $(this).parent().parent().data('color'),
+									'opacity' : opacity
+								});
+							});
 						});
 				});
 

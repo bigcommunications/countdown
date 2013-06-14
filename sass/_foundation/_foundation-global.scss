@@ -14,7 +14,8 @@ $em-base: 16px !default;
 $body-bg: #fff !default;
 $body-font-color: #f0f0f0 !default;
 $body-font-family: "brandon-grotesque",sans-serif;
-$body-font-weight: normal !default;
+$body-font-weight-fallback: normal !default;
+$body-font-weight: 900 !default;
 $body-font-style: normal !default;
 
 // We use these to control text direction settings

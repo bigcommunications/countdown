@@ -33,7 +33,8 @@ $small-font-color:                     lighten($header-font-color, 30%) !default
 
 // We use these to style paragraphs
 $paragraph-font-family:                inherit !default;
-$paragraph-font-weight:                normal !default;
+$paragraph-font-weight-fallback:       normal !default;
+$paragraph-font-weight:                900 !default;
 $paragraph-font-size:                  1em !default;
 $paragraph-line-height:                1.2 !default;
 $paragraph-margin-bottom:              emCalc(20px) !default;
@@ -157,6 +158,7 @@ a {
 /* Default paragraph styles */
 p {
   font-family: $paragraph-font-family;
+  font-weight: $paragraph-font-weight-fallback;
   font-weight: $paragraph-font-weight;
   font-size: $paragraph-font-size;
   line-height: $paragraph-line-height;
