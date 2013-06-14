@@ -39,6 +39,16 @@
 		&:first-child {
 			margin-top: 0;
 		}
+		.start-date,
+		.end-date{
+			position: absolute;
+		}
+		.start-date{
+			left: 0;
+		}
+		.end-date{
+			right: 0;
+		}
 	}
 	#today,
 	#oldest,
@@ -51,9 +61,10 @@
 		width: 0px;
 	}
 	.milestone {
-		border-left: 1px solid rgba(255, 255, 255, .4);
-		border-right: 1px solid rgba(0, 0, 0, .3);
-		position: absolute;
+		border: none;
+		span{
+			border: none;
+		}
 	}
 	.date {
 		color: #222;

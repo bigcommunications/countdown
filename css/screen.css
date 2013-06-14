@@ -249,7 +249,7 @@ figure {
  */
 /* line 253, ../sass/_normalize.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -1457,7 +1457,7 @@ blockquote p {
   /* line 376, ../sass/_foundation/_components/_type.scss */
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1489,7 +1489,7 @@ blockquote p {
   /* line 395, ../sass/_foundation/_components/_type.scss */
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -1699,7 +1699,20 @@ blockquote p {
 .count-down-bars .bar:first-child {
   margin-top: 0;
 }
+/* line 43, ../sass/_application.scss */
+.count-down-bars .bar .start-date,
+.count-down-bars .bar .end-date {
+  position: absolute;
+}
 /* line 46, ../sass/_application.scss */
+.count-down-bars .bar .start-date {
+  left: 0;
+}
+/* line 49, ../sass/_application.scss */
+.count-down-bars .bar .end-date {
+  right: 0;
+}
+/* line 56, ../sass/_application.scss */
 .count-down-bars #today,
 .count-down-bars #oldest,
 .count-down-bars #latest,
@@ -1710,13 +1723,15 @@ blockquote p {
   top: 0;
   width: 0px;
 }
-/* line 53, ../sass/_application.scss */
+/* line 63, ../sass/_application.scss */
 .count-down-bars .milestone {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  position: absolute;
+  border: none;
 }
-/* line 58, ../sass/_application.scss */
+/* line 65, ../sass/_application.scss */
+.count-down-bars .milestone span {
+  border: none;
+}
+/* line 69, ../sass/_application.scss */
 .count-down-bars .date {
   color: #222;
   font-weight: bold;
@@ -1730,7 +1745,7 @@ blockquote p {
   font-size: 0.625rem;
 }
 
-/* line 71, ../sass/_application.scss */
+/* line 82, ../sass/_application.scss */
 p {
   margin: 0;
   padding: 0;
