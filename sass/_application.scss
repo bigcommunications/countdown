@@ -1,3 +1,9 @@
+//Rem Mixin
+@mixin remS($pxSize) {
+	font-size: $pxSize;
+	font-size: $pxSize / $em-base * 1rem;
+}
+
 * {
   position: relative;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -8,37 +14,56 @@
 		padding: 2.5% !important;
 		text-transform: uppercase;
 	}
+	@include clearfix();
 }
 
 .count-down-bars {
+	.row & {
+		margin: 0 auto;
+		top: 30px;
+		width: 95%;
+	}
 	.bar {
-	 	width: auto;
 	 	height: 10px;
-	 	margin-bottom: 5px;
+	 	margin-top: 5px;
 	 	position: relative;
+		width: auto;
+		z-index: 999;
+		@include opacity(0.8);
+		@include transition(0.4s);
+		&:hover {
+			height: 40px;
+			@include opacity(1);
+			@include transition(0.4s);
+		}
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 	#today,
 	#oldest,
 	#latest,
 	.milestone {
+		border-left: 1px dashed gray;
 		position: absolute;
-			height: 100%;
-			width: 0px;
-			border-left: 1px dashed gray;
-			top: 0;
+		height: 100%;
+		top: 0;
+		width: 0px;
 	}
 	.milestone {
 		border-left: 1px solid rgba(255, 255, 255, .4);
 		border-right: 1px solid rgba(0, 0, 0, .3);
 	}
 	.date {
-		position: absolute;
+		color: #222;
+		font-weight: bold;
 		left: 50%;
 		margin-left: -50px;
+		position: absolute;
+		text-align: center;
 		top: -14px;
 		width: 100px;
-		text-align: center;
-		font-size: 10px;
+		@include remS(10px);
 	}
 }
 

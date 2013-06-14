@@ -95,6 +95,18 @@ $.ajax({
 					item.find('p').fitText(.65);
 				}, 800*i++);
 			});
+			//Bar Interaction
+			var bar = $('.bar');
+			bar.on('mouseover', function() {
+				var dex = $(this).index();
+				var cdown = $('.countdown-holster > div:not(div:nth-child('+(dex+1)+'))');
+				cdown.animate({'opacity' : 0.4}, 500);
+			});
+			bar.on('mouseout', function() {
+				var dex = $(this).index();
+				var cdown = $('.countdown-holster > div:not(div:nth-child('+(dex+1)+'))');
+				cdown.animate({'opacity' : 1}, 500);
+			});
 		},
 		error: function(){
 

@@ -1,5 +1,5 @@
 codekit-config.json
-/.sass-cache
+/.sass-cache/
 /css
 *-min.js
 .DS_Store
