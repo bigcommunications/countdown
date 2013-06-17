@@ -29,7 +29,7 @@ $.ajax({
 			success: function(data){
 				i = 0;
 				$.each(data, function(index, p){
-
+					i++;
 					var due;
 					var days_left;
 					var hours_left;
@@ -49,7 +49,14 @@ $.ajax({
 					due_day = dataDueDate.getDate();
 
 					var calcDays = calctime(due_yr, due_month, due_day);
-					countDownWrapper.append('<div id="counter-'+dataID+'" class="large-3 columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
+
+					var countLength = data.length;
+					var largeSize = 12/countLength;
+					if(largeSize <= 4) {
+						largeSize = 4;
+					}
+
+					countDownWrapper.append('<div id="counter-'+dataID+'" class="large-'+largeSize+' columns end" data-id="'+dataID+'" data-title="'+dataTitle+'" data-color="'+dataColor+'" data-deal="'+dataDeal+'">' +
 
 						'<h4><a href="'+dataLink+'">'+dataTitle+'</a></h4>' + '<p><span class="days">'+ calcDays.days + '</span> days</p>' + '<p><span class="hours">'+ calcDays.hours +'</span> hours</p>' + '<p><span class="mins">'+ calcDays.minutes +'</span> minutes</p>' + '<p><span class="secs">'+ calcDays.seconds +'</span> seconds</p>'
 

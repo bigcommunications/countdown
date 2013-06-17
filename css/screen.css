@@ -426,7 +426,7 @@ body {
   color: #bbbbbb;
   padding: 0;
   margin: 0;
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "DINCondensedW01-Normal", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1194,7 +1194,7 @@ p aside {
 /* Default header styles */
 /* line 178, ../sass/_foundation/_components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "DINCondensedW01-Normal", sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #f0f0f0;

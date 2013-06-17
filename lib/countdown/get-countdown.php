@@ -3,6 +3,7 @@ include('../../../../../wp-load.php');
 
 $args = array(
 	'post_type' => 'countdown',
+	'post_status' => 'publish',
 	'posts_per_page' => -1,
 	'orderby' => 'meta_value',
 	'meta_key' => 'due_date',
