@@ -48,16 +48,17 @@ $.ajax({
 						project = projects[c];
 						el = document.createElement('div');
 						el.className = 'bar';
-						el.title = project.project_title;
 						el.style.marginLeft = Math.round((project.start-oldest)/total_time*100) + '%';
 						el.style.marginRight = Math.round((latest-project.end)/total_time*100) + '%';
 						el.style.background = project.project_color;
+
+							el.innerHTML = '<span class="start-date"><span class="date">'+(project.start.getMonth()+1) + '/' + project.start.getDate() + '/' + project.start.getFullYear()+'</span></span><span class="end-date"><span class="date">'+(project.end.getMonth()+1) + '/' + project.end.getDate() + '/' + project.end.getFullYear()+'</span></span>';
 
 						if(project.milestones) {
 							for(mile_c = 0, mile_l = project.milestones.length; mile_c < mile_l; mile_c++) {
 								if(project.milestones[mile_c].due_date >= project.start && project.milestones[mile_c].due_date <= project.end) {
 									mile_el = document.createElement('span');
-									mile_el.innerHTML = '<span data-tooltip data-width="200" class="has-tip tip-top" title="'+project.milestones[mile_c].milestone+'">.</span>';
+									mile_el.innerHTML = '<span data-tooltip data-width="200" class="has-tip tip-top" title="'+(project.milestones[mile_c].due_date.getMonth()+1) + '/' + project.milestones[mile_c].due_date.getDate() + '/' + project.milestones[mile_c].due_date.getFullYear()+ ' ' + project.milestones[mile_c].milestone+'">.</span>';
 									mile_el.className = 'milestone milestone-'+mile_c;
 									mile_el.setAttribute('data-milestone', (project.milestones[mile_c].due_date.getMonth()+1) + '/' + project.milestones[mile_c].due_date.getDate() + '/' + project.milestones[mile_c].due_date.getFullYear());
 									mile_el.style.left = Math.round((project.milestones[mile_c].due_date.getTime()-project.start)/(project.end-project.start)*100) + '%';
