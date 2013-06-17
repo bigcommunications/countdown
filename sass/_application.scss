@@ -8,7 +8,27 @@
   position: relative;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-
+.countdown-filter{
+	border-bottom: 1px solid $primary-color;
+	font-size: emCalc(36px);
+	@include clearfix();
+	.columns{
+		padding: emCalc(10px);
+	}
+	input{
+		background: transparent;
+		border: none;
+		width: 100%;
+		&:focus{
+			box-shadow: none;
+			border: none;
+			outline: 0;
+		}
+	}
+	.search{
+		text-align: center;
+	}
+}
 .countdown-holster {
 	> div {
 		padding: 2.5% !important;
@@ -18,9 +38,9 @@
 }
 
 .count-down-bars {
-	.row & {
-		margin: 0 auto;
-		top: 30px;
+	@include clearfix();
+	&.row{
+		margin: emCalc(40px) auto;
 		width: 95%;
 	}
 	.bar {
